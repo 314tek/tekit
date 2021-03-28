@@ -1,3 +1,3 @@
 import styled from 'styled-components/native'
 
-export const Wrapper = styled.Text``
+export const Wrapper = styled.Pressable``
