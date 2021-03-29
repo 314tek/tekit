@@ -3,8 +3,8 @@ import {
   Wrapper,
   HeaderWrapper,
   HeaderGrid,
-  Left,
-  Right,
+  ColBox,
+  MidBox,
   HeaderTitle,
   Title
 } from './styled'
@@ -24,7 +24,9 @@ const Header = ({
     return (
       <HeaderWrapper>
         <HeaderGrid>
-          <Left>{left && left}</Left>
+          <ColBox>
+            <MidBox>{left && left}</MidBox>
+          </ColBox>
           <HeaderTitle>
             {titleComponent ? (
               titleComponent
@@ -32,11 +34,14 @@ const Header = ({
               <Title style={titleStyle}>{title || ''}</Title>
             )}
           </HeaderTitle>
-          <Right>{right && right}</Right>
+          <ColBox>
+            <MidBox>{right && right}</MidBox>
+          </ColBox>
         </HeaderGrid>
       </HeaderWrapper>
     )
   }, [left, right, titleComponent, title, titleStyle])
+
   return (
     <Wrapper {...others}>
       {renderHeader()}

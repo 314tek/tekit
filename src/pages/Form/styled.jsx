@@ -8,5 +8,5 @@ export const Wrapper = styled.View`
 `
 
 export const FormWrapper = styled.ScrollView`
-  padding-top: 30;
+  padding-top: 30px;
 `

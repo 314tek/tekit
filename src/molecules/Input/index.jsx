@@ -1,7 +1,24 @@
 import React, { useCallback } from 'react'
-import { Container, Wrapper, TextInputBox, Title, Right } from './styled'
+import {
+  Container,
+  Wrapper,
+  TextInputBox,
+  Title,
+  Left,
+  Right,
+  ClearIcon
+} from './styled'
 
-const Input = ({ containerStyle, title, titleStyle, right, ...others }) => {
+const Input = ({
+  containerStyle,
+  title,
+  titleStyle,
+  left,
+  right,
+  value,
+  onClear,
+  ...others
+}) => {
   const renderTitle = useCallback(() => {
     if (!title) return null
     return <Title style={titleStyle}>{title}</Title>
@@ -10,11 +27,15 @@ const Input = ({ containerStyle, title, titleStyle, right, ...others }) => {
   const renderInput = useCallback(() => {
     return (
       <Wrapper style={containerStyle}>
-        <TextInputBox {...others} />
+        {left && <Left>{left}</Left>}
+        <TextInputBox value={value} {...others} paddingLeft={left ? 0 : 10} />
+        {!!value && !!onClear && (
+          <ClearIcon name={'x-circle'} size={14} onPress={onClear} />
+        )}
         {right && <Right>{right}</Right>}
       </Wrapper>
     )
-  }, [containerStyle, others])
+  }, [containerStyle, others, left, right, onClear, value])
 
   return (
     <Container>

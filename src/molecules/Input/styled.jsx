@@ -1,5 +1,5 @@
 import styled from 'styled-components/native'
-import { Text, TextInput } from 'atoms'
+import { Text, TextInput, MidView, Icon } from 'atoms'
 import { Constant, Theme } from 'utils'
 
 export const Container = styled.View`
@@ -18,17 +18,26 @@ export const Wrapper = styled.View`
   border-width: 1px;
   border-color: ${Theme.colors.gray_5};
   border-radius: 4px;
+  align-items: center;
   overflow: hidden;
 `
 
 export const TextInputBox = styled(TextInput)`
-  padding-horizontal: 10px;
+  padding-left: ${props => `${props.paddingLeft}px`}
+  padding-right: 10px;
 `
 
-export const Right = styled.View`
+export const ColBox = styled(MidView)`
   width: 46px;
   height: 100%;
+`
+
+export const Left = styled(ColBox)``
+
+export const Right = styled(ColBox)`
   background-color: ${Theme.colors.gray_6};
-  justify-content: center;
-  align-items: center;
+`
+
+export const ClearIcon = styled(Icon)`
+  padding-right: 6px;
 `

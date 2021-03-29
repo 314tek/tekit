@@ -1,6 +1,6 @@
 import styled from 'styled-components/native'
 
-import { Text, Grid, Col } from 'atoms'
+import { Text, MidView, Grid, Col } from 'atoms'
 import { Constant } from 'utils'
 
 export const Wrapper = styled.View`
@@ -13,18 +13,13 @@ export const HeaderWrapper = styled.View`
 `
 export const HeaderGrid = styled(Grid)``
 
-export const Left = styled(Col)`
+export const ColBox = styled(Col)`
   width: 42px;
   height: 100%;
-  justify-content: center;
-  align-items: center;
 `
 
-export const Right = styled(Col)`
-  width: 42px;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
+export const MidBox = styled(MidView)`
+  flex: 1;
 `
 
 export const HeaderTitle = styled(Col)`
