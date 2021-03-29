@@ -19,6 +19,8 @@ const Header = ({
   ...others
 }) => {
   const renderHeader = useCallback(() => {
+    if (!left && !right && !title) return null
+
     return (
       <HeaderWrapper>
         <HeaderGrid>
@@ -38,7 +40,6 @@ const Header = ({
   return (
     <Wrapper {...others}>
       {renderHeader()}
-      {renderHeader}
       {children}
     </Wrapper>
   )

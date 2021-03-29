@@ -15,6 +15,7 @@ const Form = () => {
     return (
       <FormWrapper>
         <Input placeholder={'Text'} />
+        <Input placeholder={'Search'} right={<Icon name={'search'} />} />
       </FormWrapper>
     )
   }

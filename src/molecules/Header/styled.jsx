@@ -9,19 +9,19 @@ export const Wrapper = styled.View`
   background: white;
 `
 export const HeaderWrapper = styled.View`
-  height: 42;
+  height: 42px;
 `
 export const HeaderGrid = styled(Grid)``
 
 export const Left = styled(Col)`
-  width: 42;
+  width: 42px;
   height: 100%;
   justify-content: center;
   align-items: center;
 `
 
 export const Right = styled(Col)`
-  width: 42;
+  width: 42px;
   height: 100%;
   justify-content: center;
   align-items: center;
