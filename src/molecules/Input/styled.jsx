@@ -1,5 +1,4 @@
 import styled from 'styled-components/native'
-import { Grid, Col } from 'react-native-easy-grid'
 import { Text, TextInput } from 'atoms'
 import { Constant, Theme } from 'utils'
 

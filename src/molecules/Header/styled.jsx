@@ -1,6 +1,6 @@
 import styled from 'styled-components/native'
-import { Grid, Col } from 'react-native-easy-grid'
-import { Text } from 'atoms'
+
+import { Text, Grid, Col } from 'atoms'
 import { Constant } from 'utils'
 
 export const Wrapper = styled.View`
