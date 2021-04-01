@@ -3,9 +3,9 @@ import { Wrapper } from './styled'
 import FeatherIcon from 'react-native-vector-icons/Feather'
 import { Theme } from 'utils'
 
-const Icon = ({ size, color, name, ...others }) => {
+const Icon = ({ size, color, name, onPress, ...others }) => {
   return (
-    <Wrapper {...others}>
+    <Wrapper {...others} disabled={!!!onPress}>
       <FeatherIcon
         name={name}
         size={size || 22}

@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react'
-import { Wrapper, FormWrapper } from './styled'
+import { Wrapper, FormWrapper, FormItemWrapper } from './styled'
 import { Text, Icon } from 'atoms'
-import { Header, Input } from 'molecules'
+import { Header, Input, Checkbox } from 'molecules'
 import { useNavigation } from '@react-navigation/native'
 
 const Form = () => {
@@ -9,6 +9,7 @@ const Form = () => {
 
   const [search, setSearch] = useState('')
   const [showPassword, setShowPassword] = useState(false)
+  const [checked, setChecked] = useState(false)
 
   const onGoBack = useCallback(() => {
     navigation.goBack()
@@ -38,6 +39,13 @@ const Form = () => {
             />
           }
         />
+        <FormItemWrapper left={30}>
+          <Checkbox
+            // checked={checked}
+            // onChange={setChecked}
+            label={'Checkbox'}
+          />
+        </FormItemWrapper>
       </FormWrapper>
     )
   }
