@@ -12,6 +12,7 @@ export const FormWrapper = styled.ScrollView`
 `
 
 export const FormItemWrapper = styled.View`
+  flex-direction: row;
   margin-right: 15px;
   margin-left: ${props => (props.left ? `${props.left}px` : '15px')};
   margin-top: 10px;

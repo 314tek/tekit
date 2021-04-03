@@ -5,7 +5,7 @@ import { Theme } from 'utils'
 
 const Icon = ({ size, color, name, onPress, ...others }) => {
   return (
-    <Wrapper {...others} disabled={!!!onPress}>
+    <Wrapper {...others} onPress={onPress} disabled={!!!onPress}>
       <FeatherIcon
         name={name}
         size={size || 22}

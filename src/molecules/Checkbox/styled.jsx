@@ -1,5 +1,5 @@
 import styled from 'styled-components/native'
-import { Text, TextInput, MidView } from 'atoms'
+import { Text, TextInput, MidView, Pressable } from 'atoms'
 import { Constant, Theme } from 'utils'
 
 export const Wrapper = styled.View`
@@ -21,7 +21,7 @@ export const Container = styled.View`
   justify-content: flex-start;
 `
 
-export const Row = styled.Pressable`
+export const Row = styled(Pressable)`
   flex-direction: row;
   align-items: center;
 `

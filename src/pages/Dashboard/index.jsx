@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { Pressable, Text } from 'react-native'
+import { Button } from 'molecules'
 import { Router } from 'utils'
 import { useNavigation } from '@react-navigation/native'
 import { Wrapper } from './styled'
@@ -12,9 +12,7 @@ const Dashboard = () => {
 
   return (
     <Wrapper label={'Dashboard'}>
-      <Pressable onPress={onPressFormScreen}>
-        <Text>Form</Text>
-      </Pressable>
+      <Button onPress={onPressFormScreen} label={'Form screen'} />
     </Wrapper>
   )
 }

@@ -1,7 +1,8 @@
 import React, { useCallback, useState } from 'react'
 import { Wrapper, FormWrapper, FormItemWrapper } from './styled'
 import { Text, Icon } from 'atoms'
-import { Header, Input, Checkbox } from 'molecules'
+import { Header, Input, Checkbox, Button } from 'molecules'
+import { Theme } from 'utils'
 import { useNavigation } from '@react-navigation/native'
 
 const Form = () => {
@@ -15,9 +16,9 @@ const Form = () => {
     navigation.goBack()
   }, [navigation])
 
-  const renderForm = () => {
+  const renderInputs = () => {
     return (
-      <FormWrapper>
+      <>
         <Input placeholder={'Text'} />
         <Input
           placeholder={'Search'}
@@ -39,13 +40,56 @@ const Form = () => {
             />
           }
         />
-        <FormItemWrapper left={30}>
-          <Checkbox
-            // checked={checked}
-            // onChange={setChecked}
-            label={'Checkbox'}
+      </>
+    )
+  }
+
+  const renderCheckboxs = () => {
+    return (
+      <FormItemWrapper left={30}>
+        <Checkbox
+          // checked={checked}
+          // onChange={setChecked}
+          label={'Checkbox'}
+          // disabled
+        />
+      </FormItemWrapper>
+    )
+  }
+
+  const renderButtons = () => {
+    return (
+      <>
+        <FormItemWrapper>
+          <Button
+            label='Default Button'
+            onPress={() => alert('Default Button')}
           />
         </FormItemWrapper>
+
+        <FormItemWrapper>
+          <Button
+            label='Right Icon'
+            onPress={() => alert('Right Icon')}
+            right={<Icon name={'star'} color={Theme.colors.light} />}
+          />
+          <Button
+            label='Left Icon'
+            onPress={() => alert('Left Icon')}
+            left={<Icon name={'star'} color={Theme.colors.light} />}
+            style={{ marginLeft: 15 }}
+          />
+        </FormItemWrapper>
+      </>
+    )
+  }
+
+  const renderForm = () => {
+    return (
+      <FormWrapper>
+        {renderInputs()}
+        {renderCheckboxs()}
+        {renderButtons()}
       </FormWrapper>
     )
   }

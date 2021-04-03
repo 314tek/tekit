@@ -4,7 +4,7 @@ import { Text, MidView, Grid, Col } from 'atoms'
 import { Constant } from 'utils'
 
 export const Wrapper = styled.View`
-  padding-top: ${`${Constant.layout.navPadding}`};
+  padding-top: ${`${Constant.layout.navPadding}px`};
   width: ${`${Constant.layout.screenWidth}px`};
   background: white;
 `

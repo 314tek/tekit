@@ -9,3 +9,4 @@ export { default as Icon } from './Icon'
 //
 export { default as TextInput } from './TextInput'
 export { default as MidView } from './MidView'
+export { default as Pressable } from './Pressable'
